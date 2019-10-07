@@ -1,0 +1,27 @@
+.list {
+  color: #FFF;
+  font-size: 21px;
+}
+
+.list .item {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  background: #3F51B5;
+  padding: 15px;
+  margin: 15px auto;
+  border-radius: 7px;
+}
+
+.list .item label {
+  width: 100%;
+}
+
+.item .check-item {
+  color: #b3b3b3;
+  text-decoration: line-through;
+}
+
+.list .item.item-cheked {
+  background: #4b5bb6;
+}

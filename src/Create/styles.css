@@ -1,0 +1,49 @@
+.create-container {
+  width: 95%;
+  height: 50px;
+  background: #3d51c2;
+  position: absolute;
+  margin: auto;
+  left: 2.5%;
+  display: flex;
+  align-items: center;
+  padding: 0 13px;
+  border-radius: 7px;
+  opacity: 1;
+  transition: .3s ease-in-out;
+}
+
+.create-container--open {
+  opacity: 1;
+  bottom: 10px;
+  transition: .3s ease-in-out;
+}
+.create-container--close {
+  opacity: 0;
+  bottom: -30px;
+  transition: .3s ease-in-out;
+}
+
+.create-container input[type="text"] {
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid #FF4081;
+  color: #FFF;
+  font-size: 20px;
+  width: 70%;
+}
+
+.create-container button{
+  border: none;
+  font-size: 25px;
+  background: transparent;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+.create-container button:nth-of-type(1){
+  color: #00BCD4;
+}
+.create-container button:nth-of-type(2){
+  color: #FF4081;
+}
