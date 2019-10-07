@@ -1,9 +1,9 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 import "./styles.css";
 import Item from "../Item";
-
-export default function List({ listTodos, checkItem }) {
+const List = ({ listTodos, checkItem }) => {
 
   const listOfItems =
     listTodos.length >= 1 &&
@@ -18,3 +18,10 @@ export default function List({ listTodos, checkItem }) {
 
   return <ul className="list">{listOfItems}</ul>;
 }
+
+List.propTypes = {
+  listTodos: PropTypes.array,
+  checkItem: PropTypes.func
+};
+
+export default List;

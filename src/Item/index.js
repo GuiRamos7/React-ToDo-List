@@ -1,21 +1,27 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
-import CheckBox from '../Checkbox';
+import CheckBox from "../Checkbox";
 
-export default function Item({ text, isChecked, onChange }) {
+const Item = ({ text, isChecked, onChange }) => {
   return (
     <>
-      <li className={`item ${isChecked && 'item-cheked'}`}>
-        <CheckBox isChecked={isChecked} labelClassName={isChecked && 'check-item'} onChange={onChange} text={text}/>
-
-        {/* <label className={isChecked && 'check-item'} htmlFor={text}>{text}</label> */}
-        {/* <input
-          id={text}
-          type="checkbox"
+      <li className={`item ${isChecked && "item-cheked"}`}>
+        <CheckBox
+          isChecked={isChecked}
+          labelClassName={isChecked && "check-item"}
           onChange={onChange}
-          checked={isChecked}
-        /> */}
+          text={text}
+        />
       </li>
     </>
   );
 }
+
+Item.propTypes = {
+  text: PropTypes.string,
+  isChecked: PropTypes.bool,
+  onChange: PropTypes.func
+};
+
+export default Item;

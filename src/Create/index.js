@@ -1,15 +1,15 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { MdCheck, MdClose } from "react-icons/md";
-
 import "./styles.css";
 
-export default function Create({
+const Create = ({
   isOpen,
   handlerClose,
   handleText,
   modalText,
   createTask
-}) {
+}) => {
   return (
     <div
       className={`create-container ${
@@ -30,3 +30,13 @@ export default function Create({
     </div>
   );
 }
+
+Create.propTypes = {
+  isOpen: PropTypes.bool,
+  handlerClose: PropTypes.func,
+  handleText: PropTypes.func,
+  createTask: PropTypes.func,
+  modalText: PropTypes.string
+};
+
+export default Create;
